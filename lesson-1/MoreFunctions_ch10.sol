@@ -39,7 +39,5 @@ contract ZombieFactory {
     return a * b;
     }
     */
-    function _generateRandomDna(string _str) private view returns (uint) {
-        
-    }
+    function _generateRandomDna(string _str) private view returns (uint) {}
 }
