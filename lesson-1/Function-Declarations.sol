@@ -1,5 +1,7 @@
 pragma solidity ^0.4.19;
 
+// Chapter 7
+
 contract ZombieFactory {
 
     uint dnaDigits = 16; // unsigned integer for dna values
