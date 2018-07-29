@@ -1,0 +1,29 @@
+pragma solidity ^0.4.19;
+
+// Chapter 8 - https://cryptozombies.io/en/lesson/1/chapter/8
+
+contract ZombieFactory {
+
+    uint dnaDigits = 16; // unsigned integer for dna values
+    uint dnaModulus = 10 ** dnaDigits;
+
+    // Structs allow you to create more complicated data types that have multiple properties.
+    struct Zombie {
+        string name;
+        uint dna;
+    }
+    
+    /* 
+    There are two types of arrays in Solidity: fixed arrays and dynamic arrays
+    below, is a dynamic public array; for fixed add num in brackets
+    Other contracts would then be able to read (but not write) to this array. So this is a useful pattern for storing public data in your contract.
+    */
+    Zombie[] public zombies;
+
+    // start here
+    function createZombie(string _name, uint _dna) {
+      // start here
+      // create new Persons and add them to our people array - note no need for new keyword
+      zombies.push(Zombie(_name, _dna)); 
+    }
+}
